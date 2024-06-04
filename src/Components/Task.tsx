@@ -1,15 +1,16 @@
 import React from "react";
 
-interface type{
+interface TaskProps{
     text: string;
+    deleteTask: () => void;
 }
 
-const Task: React.FC<type> = ({text}) => {
+const Task: React.FC<TaskProps> = ({text, deleteTask}) => {
     return (
         <div>
             <div className={'task-display'}>
                 <p>{text}</p>
-                <button>delete</button>
+                <button onClick={deleteTask}>delete</button>
             </div>
         </div>
     );
