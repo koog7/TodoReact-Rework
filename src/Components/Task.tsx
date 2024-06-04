@@ -1,9 +1,14 @@
+import React from "react";
 
-const Task = () => {
+interface type{
+    text: string;
+}
+
+const Task: React.FC<type> = ({text}) => {
     return (
         <div>
             <div className={'task-display'}>
-                <p>Task text</p>
+                <p>{text}</p>
                 <button>delete</button>
             </div>
         </div>
@@ -11,3 +16,4 @@ const Task = () => {
 };
 
 export default Task;
+
