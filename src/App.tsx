@@ -25,9 +25,12 @@ const App = () => {
         setObjective([...objective]);
     }
 
+    const addTask = (TaskText : string) => {
+        setObjective([...objective, { id: `${objective.length + 1}`, text: TaskText }]);
+    }
     return (
         <>
-            <AddTaskForm />
+            <AddTaskForm  createTask={addTask}/>
             {objective.map((iteration) => (
                 <Task key={iteration.id} text={iteration.text} deleteTask={() => deleteById(iteration.id)}/>
             ))}

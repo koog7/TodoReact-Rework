@@ -10,7 +10,7 @@ const Task: React.FC<TaskProps> = ({text, deleteTask}) => {
         <div>
             <div className={'task-display'}>
                 <p>{text}</p>
-                <button onClick={deleteTask}>delete</button>
+                <button onClick={deleteTask}>❌</button>
             </div>
         </div>
     );
